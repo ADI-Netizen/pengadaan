@@ -1,0 +1,38 @@
+<?php
+
+Route::get('/', 'Home@index');
+Route::get('/registrasi','Registrasi@index');
+Route::post('/regist', 'Registrasi@regist');
+Route::get('/login','Supplier@login');
+Route::post('/masukSupplier', 'Supplier@masukSupplier');
+Route::get('/keluarSupplier', 'Supplier@keluarSupplier');
+Route::get('/masukAdmin', 'Admin@index');
+Route::post('/loginAdmin', 'Admin@loginAdmin');
+Route::get('/pengajuan', 'Pengajuan@pengajuan');
+Route::get('/logoutAdmin', 'Admin@logoutAdmin');
+Route::get('/listAdmin', 'Admin@listAdmin');
+Route::post('/tambahAdmin', 'Admin@tambahAdmin');
+Route::post('/ubahAdmin', 'Admin@ubahAdmin');
+Route::get('/hapusAdmin/{id}', 'Admin@hapusAdmin');
+Route::get('/pengadaan', 'Pengadaan@index');
+Route::post('/tambahPengadaan', 'Pengadaan@tambahPengadaan');
+Route::get('/hapusGambar/{id}', 'Pengadaan@hapusGambar');
+Route::post('/uploadGambar', 'Pengadaan@uploadGambar');
+Route::get('/hapusPengadaan/{id}', 'Pengadaan@hapusPengadaan');
+Route::post('/ubahPengadaan', 'Pengadaan@ubahPengadaan');
+Route::get('/listSupplier', 'Pengadaan@listSupplier');
+Route::get('/pengajuan', 'Pengajuan@pengajuan');
+Route::post('/tambahPengajuan', 'Pengajuan@tambahPengajuan');
+Route::get('/terimaPengajuan/{id}', 'Pengajuan@terimaPengajuan');
+Route::get('/tolakPengajuan/{id}', 'Pengajuan@tolakPengajuan');
+Route::get('/riwayat', 'Pengajuan@riwayat');
+Route::post('/tambahLaporan', 'Pengajuan@tambahLaporan');
+Route::get('/laporan', 'Pengajuan@laporan');
+Route::get('/selesaiPengajuan/{id}', 'Pengajuan@selesaiPengajuan');
+Route::get('/pengajuanselesai', 'Pengajuan@pengajuanselesai');
+Route::get('/tolakLaporan/{id}', 'Pengajuan@tolakLaporan');
+Route::get('/listSupp', 'Supplier@listSupplier');
+Route::get('/nonAktif/{id}', 'Supplier@nonAktif');
+Route::get('/aktif/{id}', 'Supplier@aktif');
+Route::post('/ubahPassSupp', 'Supplier@ubahPassword');
+Route::post('/ubahPassAdm', 'Admin@ubahPassword');
